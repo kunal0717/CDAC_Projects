@@ -43,7 +43,7 @@ public class AwsS3Service {
             InputStream inputStream = photo.getInputStream();
 
             ObjectMetadata metadata = new ObjectMetadata();
-            metadata.setContentType("image/jpeg");
+            metadata.setContentType("image/jpg");
 
             PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, s3Filename, inputStream, metadata);
             s3Client.putObject(putObjectRequest);
